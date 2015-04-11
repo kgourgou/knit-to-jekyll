@@ -12,7 +12,7 @@ If you have tried to combine the two, you know the workflow.
 2. knit it with knitr. 
 3. Write yaml front matter at the top. 
 4. Save file with today's date in the filename. 
-5. Move file and figures to the _posts folder. 
+5. Move file to the _posts folder. 
 
 The knit-to-jekyll function attempts to help you by changing that workflow to : 
 
@@ -21,7 +21,8 @@ The knit-to-jekyll function attempts to help you by changing that workflow to :
 ```R
 knitToJekyll("filename", title="My awesome post.")
 ```
-3. Move figures to the _posts folder. 
+
+If you also have figures in your post, you would need to move them yourself (until me or someone else writes the extra function calls needed to automate this). 
 
 
-Isn't that much better? Let me know if this can be made even better! 
+Isn't that much better? 
