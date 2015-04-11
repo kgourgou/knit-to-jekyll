@@ -15,7 +15,9 @@ post_path = "path/to/_posts" # The local path to the _posts folder
 
 
 
-knitToJekyll <- function(input, title_of_post="", author=post_author, base.url = myjekyllsite, path_to_posts = post_path, cp=FALSE) {
+knitToJekyll <- function(input, title_of_post="", author=post_author, 
+                         base.url = myjekyllsite, path_to_posts = post_path, 
+                         cp=FALSE) {
   
   # If cp == TRUE, a copy of the post will be moved over to 
     # the folder post_path
