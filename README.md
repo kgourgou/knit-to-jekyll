@@ -1,10 +1,10 @@
 # knit-to-jekyll
-## Blog like a hacker from R. 
+## Blogging like a hacker, from R. 
 
-RMarkdown is great for writing files that contain mathematics, code and results
+[RMarkdown](http://rmarkdown.rstudio.com/) is great for writing files that contain mathematics, code and results
 from that code. 
 
-Jekyll is a great blogging platform. 
+[Jekyll](http://jekyllrb.com/) is a great blogging platform. 
 
 If you have tried to combine the two, you know the workflow. 
 
