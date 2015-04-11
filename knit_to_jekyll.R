@@ -1,17 +1,21 @@
 
 # You may want to set your working directory to the drafts
 # folder or wherever you store your drafts. 
-#setwd("")
+# Leave as is if your working directory is the same as the drafts folder 
+# when you run this. 
 
-# Don't forget to set the following variables first.  
-# Url of your jekyll website.
-myjekyllsite = c("a_cool_blog.github.io")
-post_author = "you"
-post_path = "path/to/_posts";
+path_to_drafts = get_wd();
+setwd(path_to_drafts)
+
+# Don't forget to set the following variables!
+
+myjekyllsite = c("a_cool_blog.github.io") # Url of your jekyll website.
+post_author = "you" # Your name
+post_path = "path/to/_posts" # The local path to the _posts folder
 
 
 
-knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyllsite, path_to_posts = post_path, cp=FALSE) {
+knitToJekyll <- function(input, title_of_post="", author=post_author, base.url = myjekyllsite, path_to_posts = post_path, cp=FALSE) {
   
   # If cp == TRUE, a copy of the post will be moved over to 
     # the folder post_path
@@ -37,7 +41,7 @@ knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyl
   # Set front-matter of new file.
   yaml_front_matter <- c("---", 
                          "layout: post",
-                         paste("title:", title),
+                         paste("title:", title_of_post),
                          paste("author:", author),
                          "---");
   
@@ -52,7 +56,7 @@ knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyl
   writeLines(post_content, post_filename);
 
   # Don't forget about the title! 
-  if(title==""){
+  if(title_of_post==""){
             warning("Did not find a title for the Jekyll post!")
   }
     
@@ -60,7 +64,10 @@ knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyl
            # Copy the file over to posts.
             file.copy(from = post_filename, to=path_to_posts,
                       copy.mode=TRUE)
-            print(paste("A copy of the post is over to",path_to_posts))
+
+            # Motivational message follows. 
+            print(paste("Good job! A copy of the post is over to",path_to_posts))
+            print("Share it with the world!")
     }
 
 }
