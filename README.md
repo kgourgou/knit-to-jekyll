@@ -18,11 +18,9 @@ The knit-to-jekyll function attempts to help you by changing that workflow to :
 
 1. Write post in RMarkdown with filename "filename.Rmd". 
 2. Run knitToJekyll as 
-
 ```R
 knitToJekyll("filename", title="My awesome post.")
 ```
-
 3. Move figures to the _posts folder. 
 
 
