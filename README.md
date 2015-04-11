@@ -23,6 +23,7 @@ The knit-to-jekyll function attempts to help you by changing that workflow to :
 knitToJekyll("title", title="My awesome post.")
 ```
 
-3. Move file and figures to the _posts folder. 
+3. Move figures to the _posts folder. 
+
 
 Isn't that much better? 

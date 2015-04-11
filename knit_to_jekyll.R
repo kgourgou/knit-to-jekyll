@@ -11,8 +11,11 @@ post_path = "path/to/_posts";
 
 
 
-knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyllsite, path_to_posts = post_path) {
-   
+knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyllsite, path_to_posts = post_path, cp=FALSE) {
+  
+  # If cp == TRUE, a copy of the post will be moved over to 
+    # the folder post_path
+
   require(knitr);                   
   
   # Do knit magic.
@@ -47,5 +50,17 @@ knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyl
   
   # Write back.
   writeLines(post_content, post_filename);
-  
+
+  # Don't forget about the title! 
+  if(title==""){
+            warning("Did not find a title for the Jekyll post!")
+  }
+    
+ if(cp){
+           # Copy the file over to posts.
+            file.copy(from = post_filename, to=path_to_posts,
+                      copy.mode=TRUE)
+            print(paste("A copy of the post is over to",path_to_posts))
+    }
+
 }
