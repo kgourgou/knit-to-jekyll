@@ -1,13 +1,15 @@
 
 # You may want to set your working directory to the drafts
-# folder. 
+# folder or wherever you store your drafts. 
 #setwd("")
 
+# Don't forget to set the following variables first.  
 # Url of your jekyll website.
 myjekyllsite = c("a_cool_blog.github.io")
 post_author = "you"
-
 post_path = "path/to/_posts";
+
+
 
 knitToJekyll <- function(input, title="", author=post_author, base.url = myjekyllsite, path_to_posts = post_path) {
    
