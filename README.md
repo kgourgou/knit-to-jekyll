@@ -26,4 +26,4 @@ knitToJekyll("filename", title="My awesome post.")
 3. Move figures to the _posts folder. 
 
 
-Isn't that much better?
+Isn't that much better? Let me know if this can be made even better! 
