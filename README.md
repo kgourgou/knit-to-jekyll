@@ -27,4 +27,4 @@ If you also have figures in your post, you would need to move them yourself (unt
 
 Isn't that much better? 
 
-[Another work in this direction](https://github.com/yihui/knitr-jekyll), by the creator of knitr.
+This is more of a quick hack in R rather than a complete solution. [Another work in this direction](https://github.com/yihui/knitr-jekyll), by the creator of knitr.
